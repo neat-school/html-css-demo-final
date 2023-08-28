@@ -2,7 +2,14 @@ body {
   margin: 0;
   background: #000;
   color: #fff;
-  font-family: sans-serif;
+  font-family: "gal-gothic-variable", sans-serif;
+  font-variation-settings: "wght" 400;
+  /* display: flex;
+  flex-direction: column;
+  gap: 4rem; */
+}
+
+main {
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -10,8 +17,21 @@ body {
 
 h1,
 h2 {
-  font-family: serif;
+  font-family: "marlide-display-variable", serif;
+  font-variation-settings: "wght" 300;
   margin: 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+img {
+  vertical-align: bottom;
 }
 
 .container {
@@ -36,6 +56,13 @@ h2 {
   align-items: center;
 }
 
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -43,11 +70,14 @@ h2 {
   gap: 2rem;
 }
 
-.heading-with-byline {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.125rem;
+.hero-subline {
+  text-transform: uppercase;
+  color: #ff007a;
+  letter-spacing: 0.5rem;
+}
+
+.hero img {
+  width: 40%;
 }
 
 .cta {
@@ -82,8 +112,21 @@ a {
   color: inherit;
 }
 
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.gallery {
+}
+
+.gallery ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.gallery ul li {
+}
+
+.gallery ul li img {
+  width: 100%;
 }
