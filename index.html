@@ -15,10 +15,11 @@
           <li><a href="#hej">hej!</a></li>
           <li><a href="#gallerie">Gallerie</a></li>
           <li><a href="#autorin">Autorin</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
     </header>
-    <main class="container">
+    <main class="container" id="hej">
       <section class="hero">
         <article class="hero-content">
           <p class="hero-subline">Jetzt eintauchen</p>
@@ -32,21 +33,21 @@
         </article>
         <img src="https://placekitten.com/800/1200" alt="" />
       </section>
-      <section class="gallery">
+      <section class="gallery" id="gallerie">
         <h2>Gallerie</h2>
         <ul>
-          <li><img src="https://placekitten.com/200/300" alt="" /></li>
-          <li><img src="https://placekitten.com/200/300" alt="" /></li>
-          <li><img src="https://placekitten.com/200/300" alt="" /></li>
-          <li><img src="https://placekitten.com/200/300" alt="" /></li>
-          <li><img src="https://placekitten.com/200/300" alt="" /></li>
-          <li><img src="https://placekitten.com/200/300" alt="" /></li>
+          <li><img src="https://placekitten.com/400/600" alt="" /></li>
+          <li><img src="https://placekitten.com/400/601" alt="" /></li>
+          <li><img src="https://placekitten.com/400/602" alt="" /></li>
+          <li><img src="https://placekitten.com/400/603" alt="" /></li>
+          <li><img src="https://placekitten.com/400/604" alt="" /></li>
+          <li><img src="https://placekitten.com/400/605" alt="" /></li>
         </ul>
       </section>
-      <section class="author">
-        <img src="https://placekitten.com/200/300" alt="" />
+      <section class="author" id="autorin">
+        <img src="https://placekitten.com/800/1200" alt="" />
         <article>
-          <h2>Pionierin der KI-generierten Floral-Prints</h2>
+          <h1>Pionierin der KI-generierten Floral-Prints</h1>
           <p>
             Marina Shipurk hat sich als eine der wegweisenden Persönlichkeiten
             in der aufstrebenden Welt der KI-generierten floralen Prints
@@ -64,11 +65,95 @@
             Lernen ergeben könnten. Ihre Leidenschaft führte sie dazu, in die
             Welt der KI-gesteuerten Kreativität einzutauchen.
           </p>
+          <p>
+            Durch Jahre der Erkundung und des Experimentierens mit
+            KI-Generatoren hat Marina Shipurk einen einzigartigen Stil
+            entwickelt, der die ästhetische Anziehungskraft von floralen Mustern
+            mit der Vielseitigkeit von KI-Algorithmen verbindet. Ihre Fähigkeit,
+            komplexe Designkonzepte in klare und beeindruckende visuelle
+            Darstellungen umzusetzen, hat ihr Anerkennung und Bewunderung von
+            Künstlern, Designern und Technologieenthusiasten gleichermaßen
+            eingebracht.
+          </p>
+          <p>
+            Marina's Arbeit geht über das Schaffen von bloßen Bildern hinaus.
+            Sie erkundet die subtile Symbiose zwischen Mensch und Maschine und
+            betont, wie die KI-generierten floralen Prints nicht nur neue
+            Dimensionen der Schönheit eröffnen, sondern auch die Art und Weise,
+            wie wir Kreativität verstehen, herausfordern. Ihre Kreationen sind
+            Ausdruck einer kollaborativen Beziehung zwischen ihrem eigenem
+            künstlerischen Instinkt und den Möglichkeiten der KI.
+          </p>
+          <p>
+            Als Vorreiterin auf diesem aufregenden Gebiet ist Marina Shipurk
+            nicht nur eine Inspirationsquelle für Künstlerinnen und Künstler,
+            sondern auch ein Brückenbauer zwischen Kunst und Technologie. Ihre
+            Arbeit zeigt eindrucksvoll, wie digitale Innovation und menschliche
+            Vision Hand in Hand gehen können, um eine erstaunliche neue Ära der
+            Designmöglichkeiten zu gestalten.
+          </p>
         </article>
       </section>
+      <section class="contact" id="kontakt">
+        <h2>Jetzt kontakt aufnehmen!</h2>
+        <form id="contact" action="" method="post">
+          <fieldset>
+            <input
+              placeholder="Dein Name"
+              type="text"
+              tabindex="1"
+              required
+              autofocus
+            />
+          </fieldset>
+          <fieldset>
+            <input
+              placeholder="Deine Email Addresse"
+              type="email"
+              tabindex="2"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <input
+              placeholder="Deine Telefonnummer (optional)"
+              type="tel"
+              tabindex="3"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <input
+              placeholder="Deine Website (optional)"
+              type="url"
+              tabindex="4"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <textarea
+              placeholder="Deine Nachricht hier...."
+              tabindex="5"
+              required
+            ></textarea>
+          </fieldset>
+          <fieldset>
+            <button
+              name="submit"
+              type="submit"
+              id="contact-submit"
+              data-submit="...sende"
+            >
+              Absenden
+            </button>
+          </fieldset>
+        </form>
+      </section>
     </main>
-    <footer class="container">
-      <div>floral</div>
-    </footer>
+    <div class="footer-bg">
+      <footer class="container">
+        <div>floral</div>
+      </footer>
+    </div>
   </body>
 </html>

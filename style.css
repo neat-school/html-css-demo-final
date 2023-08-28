@@ -1,12 +1,15 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   background: #000;
   color: #fff;
   font-family: "gal-gothic-variable", sans-serif;
   font-variation-settings: "wght" 400;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  gap: 4rem; */
+  gap: 4rem;
 }
 
 main {
@@ -32,6 +35,8 @@ h2 {
 
 img {
   vertical-align: bottom;
+  border-radius: 36px;
+  max-width: 100%;
 }
 
 .container {
@@ -115,6 +120,10 @@ a {
 .gallery {
 }
 
+.gallery h2 {
+  padding: 0 0 1rem 0;
+}
+
 .gallery ul {
   list-style: none;
   padding: 0;
@@ -129,4 +138,106 @@ a {
 
 .gallery ul li img {
   width: 100%;
+}
+
+.author {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 5rem;
+}
+
+.author h1 {
+  padding: 0 0 3rem 0;
+}
+
+.author img {
+  width: 40%;
+}
+
+.author article {
+  width: 60%;
+}
+
+.author p {
+  line-height: 1.5;
+}
+
+.contact h2 {
+  padding: 0 0 1rem 0;
+}
+
+.contact form {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 36px;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact input[type="tel"],
+.contact input[type="url"],
+.contact button[type="submit"],
+.contact textarea {
+  font-family: "gal-gothic-variable", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-variation-settings: "wght" 400;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact input[type="tel"],
+.contact input[type="url"],
+.contact textarea {
+  width: 100%;
+  background: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+  border: 0;
+  border-radius: 6px;
+}
+
+.contact input[type="text"]:hover,
+.contact input[type="email"]:hover,
+.contact input[type="tel"]:hover,
+.contact input[type="url"]:hover,
+.contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+.contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: 0;
+  background: #ff007a;
+  color: #fff;
+  margin: 0;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+}
+
+fieldset {
+  border: 0;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+.footer-bg {
+  background: #1d1d1d;
+}
+footer {
+  font-size: 1.5rem;
+  padding: 3rem 0;
 }
