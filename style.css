@@ -8,12 +8,12 @@
   --font-heading: serif;
   --font-body: system-ui;
 
-  --color-foreground: black;
-  --color-bg: white;
-  --color-footer: rgb(0 0 0 / 10%);
+  --color-main-foreground: black;
+  --color-main: white;
   --color-primary: deeppink;
   --color-primary-foreground: white;
-  --color-border: rgb(0 0 0 / 50%);
+  --color-border: hsl(0 0% 0% / 50%);
+  --color-footer: hsl(0 0% 0% / 10%);
 
   --image-bg: url("/images/bg-landscape.png");
 
@@ -28,16 +28,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-foreground: white;
-    --color-bg: black;
-    --color-border: rgb(255 255 255 / 50%);
-    --color-footer: rgb(255 255 255 / 10%);
+    --color-main-foreground: white;
+    --color-main: black;
+    --color-border: hsl(0 0% 100% / 50%);
+    --color-footer: hsl(0 0% 100% / 10%);
   }
 }
 
 /* Container Utility */
 .container {
-  width: min(100% - 2rem, 1200px);
+  width: min(100% - 4rem, 1200px);
   margin: 0 auto;
 }
 
@@ -99,17 +99,17 @@ p {
   text-transform: uppercase;
   color: var(--color-primary);
   letter-spacing: 0.5rem;
-  text-shadow: 0 0 1rem var(--color-bg);
+  text-shadow: 0 0 1rem var(--color-main);
 }
 
 /* Body Styles */
 body {
   margin: 0;
-  color: var(--color-foreground);
+  color: var(--color-main-foreground);
   font-family: var(--font-body);
   display: grid;
   gap: 4rem;
-  background: var(--image-bg) no-repeat top / contain, var(--color-bg);
+  background: var(--image-bg) no-repeat top / contain, var(--color-main);
 }
 
 /* Image Styles */
@@ -173,7 +173,7 @@ img {
   display: grid;
   place-items: center;
   border: none;
-  border-radius: 9999px;
+  border-radius: var(--radius);
   background: var(--color-primary);
   padding-inline: 2rem;
   width: fit-content;
