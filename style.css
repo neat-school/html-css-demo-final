@@ -8,28 +8,28 @@
   --font-heading: serif;
   --font-body: system-ui;
 
-  --color-main-foreground: black;
-  --color-main: white;
+  --color-body: white;
+  --color-body-text: black;
   --color-primary: deeppink;
-  --color-primary-foreground: white;
+  --color-primary-text: white;
   --color-border: hsl(0 0% 0% / 50%);
   --color-footer: hsl(0 0% 0% / 10%);
 
-  --image-bg: url("/images/bg-landscape.png");
+  --image-bg: url(images/bg-landscape.png);
 
   --radius: 0.5rem;
 }
 
 @media (orientation: portrait) {
   :root {
-    --image-bg: url("/images/bg-portrait.png");
+    --image-bg: url(images/bg-portrait.png);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-main-foreground: white;
-    --color-main: black;
+    --color-body: black;
+    --color-body-text: white;
     --color-border: hsl(0 0% 100% / 50%);
     --color-footer: hsl(0 0% 100% / 10%);
   }
@@ -38,13 +38,12 @@
 /* Container Utility */
 .container {
   width: min(100% - 4rem, 1200px);
-  margin: 0 auto;
+  margin-inline: auto;
 }
 
 /* Grid Utility */
 .grid {
   display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
   align-items: center;
   gap: 2rem;
   margin: 0;
@@ -52,9 +51,9 @@
   list-style: none;
 }
 
-@media only screen and (min-width: 860px) {
+@media (min-width: 860px) {
   .grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .span-2 {
@@ -68,8 +67,8 @@ h2 {
   font-family: var(--font-heading);
   font-weight: normal;
   letter-spacing: -0.05em;
-  text-wrap: balance;
   line-height: 1;
+  text-wrap: balance;
 }
 
 h1 {
@@ -99,40 +98,40 @@ p {
   text-transform: uppercase;
   color: var(--color-primary);
   letter-spacing: 0.5rem;
-  text-shadow: 0 0 1rem var(--color-main);
+  text-shadow: 0 0 1rem var(--color-body);
 }
 
 /* Body Styles */
 body {
   margin: 0;
-  color: var(--color-main-foreground);
+  color: var(--color-body-text);
   font-family: var(--font-body);
   display: grid;
   gap: 4rem;
-  background: var(--image-bg) no-repeat top / contain, var(--color-main);
+  background: var(--image-bg) no-repeat top / contain, var(--color-body); /* ✅ (image-bg var fehlt noch) */
 }
 
 /* Image Styles */
 img {
-  vertical-align: bottom;
+  display: block;
   border-radius: var(--radius);
   max-width: 100%;
 }
 
 /* Layout Styles: Header, Main, Footer */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+header {
   height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.main {
+main {
   display: grid;
   gap: 5rem;
 }
 
-.footer {
+footer {
   background: var(--color-footer);
   padding-block: 3rem;
 }
@@ -144,7 +143,7 @@ img {
   list-style: none;
 }
 
-@media only screen and (min-width: 860px) {
+@media (min-width: 860px) {
   .navigation {
     gap: 3rem;
   }
@@ -157,55 +156,57 @@ img {
   gap: 1rem;
   padding: 0;
   margin-block: 2rem;
+  list-style: none;
 }
 
 .badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 1px solid var(--color-border);
-  border-radius: 9999px;
+  border-radius: 99rem;
   padding: 0.5rem 1rem;
 }
 
 /* Button Styles */
 .button {
-  display: grid;
-  place-items: center;
-  border: none;
+  display: flex;
+  align-items: center;
   border-radius: var(--radius);
-  background: var(--color-primary);
   padding-inline: 2rem;
   width: fit-content;
   height: 3.5rem;
+
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.25rem;
-  color: var(--color-primary-foreground);
-  font: inherit;
+
   transition: all 0.2s;
+
+  /* only form */
+  border: none;
+  font: inherit;
 }
 
 .button:hover {
-  background: var(--color-primary-foreground);
+  background: var(--color-primary-text);
   color: var(--color-primary);
 }
 
 /* Form and Input Styles */
-.form {
+form {
   display: grid;
   gap: 1rem;
+  accent-color: var(--color-primary);
 }
 
-.radio-group {
+fieldset {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 0.5rem;
   padding: 1rem;
-  accent-color: var(--color-primary);
 }
 
 .input {
