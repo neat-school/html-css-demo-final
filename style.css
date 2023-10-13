@@ -12,17 +12,18 @@
   --color-body-text: black;
   --color-primary: deeppink;
   --color-primary-text: white;
+  --color-overline: mediumvioletred;
   --color-border: hsl(0 0% 0% / 50%);
   --color-footer: hsl(0 0% 0% / 10%);
 
-  --image-bg: url(images/bg-landscape.png);
+  --image-bg: url(images/bg_landscape.png); /* FIXME */
 
   --radius: 0.5rem;
 }
 
 @media (orientation: portrait) {
   :root {
-    --image-bg: url(images/bg-portrait.png);
+    --image-bg: url(images/bg_portrait.png); /* FIXME */
   }
 }
 
@@ -30,6 +31,7 @@
   :root {
     --color-body: black;
     --color-body-text: white;
+    --color-overline: pink;
     --color-border: hsl(0 0% 100% / 50%);
     --color-footer: hsl(0 0% 100% / 10%);
   }
@@ -66,7 +68,6 @@ h1,
 h2 {
   font-family: var(--font-heading);
   font-weight: normal;
-  letter-spacing: -0.05em;
   line-height: 1;
   text-wrap: balance;
 }
@@ -77,7 +78,8 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 3rem;
+  margin-block: 1rem;
 }
 
 p {
@@ -89,16 +91,21 @@ p {
   color: inherit;
 }
 
+@media (min-width: 860px) {
+  .link {
+    font-size: 1.25rem;
+  }
+}
+
 .link:hover {
   text-decoration: underline;
   text-underline-offset: 0.25rem;
 }
 
-.byline {
+.overline {
+  color: var(--color-overline);
   text-transform: uppercase;
-  color: var(--color-primary);
   letter-spacing: 0.5rem;
-  text-shadow: 0 0 1rem var(--color-body);
 }
 
 /* Body Styles */
@@ -128,7 +135,7 @@ header {
 
 main {
   display: grid;
-  gap: 5rem;
+  gap: 6rem;
 }
 
 footer {
@@ -139,14 +146,8 @@ footer {
 /* Navigation List Styles */
 .navigation {
   display: flex;
-  gap: 1rem;
+  gap: 3rem; /* FIXME */
   list-style: none;
-}
-
-@media (min-width: 860px) {
-  .navigation {
-    gap: 3rem;
-  }
 }
 
 /* Badges List and Badge */
@@ -213,6 +214,8 @@ fieldset {
   margin-top: 0.25rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
+  background: transparent; /* FIXME */
+  color: inherit; /* FIXME */
   padding: 0.5rem 1rem;
   width: 100%;
   resize: vertical;
